@@ -11,6 +11,7 @@ import {
 } from "../utils/transactionUtils";
 import CommentsList from "./CommentList";
 import TransactionTitle from "./TransactionTitle";
+import thrash, { ITERATIONS } from "../utils/thrash";
 import TransactionAmount from "./TransactionAmount";
 
 const useStyles = makeStyles((theme) => ({
@@ -86,6 +87,7 @@ const TransactionDetail: React.FC<TransactionProps> = ({
   currentUser,
 }) => {
   const classes = useStyles();
+  thrash(ITERATIONS * 10);
 
   return (
     <Paper className={classes.paper}>

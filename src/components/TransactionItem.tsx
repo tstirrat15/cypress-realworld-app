@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import { ThumbUpAltOutlined as LikeIcon, CommentRounded as CommentIcon } from "@material-ui/icons";
 import { TransactionResponseItem } from "../models";
+import thrash from "../utils/thrash";
 import TransactionTitle from "./TransactionTitle";
 import TransactionAmount from "./TransactionAmount";
 
@@ -67,6 +68,7 @@ const TransactionItem: React.FC<TransactionProps> = ({ transaction }) => {
   const showTransactionDetail = (transactionId: string) => {
     history.push(`/transaction/${transactionId}`);
   };
+  thrash();
 
   return (
     <ListItem
